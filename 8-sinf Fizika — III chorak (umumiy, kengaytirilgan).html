@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>8-sinf Fizika — III chorak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141829; --bg-2:#1c2138; --panel:#1f253f; --panel-2:#262d4c;
+  --ink:#EDE8DC; --dim:#B9B6C8; --line:#363c5c;
+  --amber:#F2A93B; --teal:#59D6C4; --violet:#A78BFA; --danger:#E8735F;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:70px;height:100%}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);
+  background-image:radial-gradient(circle at 15% 0%,rgba(242,169,59,.08),transparent 40%),radial-gradient(circle at 90% 20%,rgba(167,139,250,.08),transparent 45%);
+  color:var(--ink);font-family:'Manrope',sans-serif;line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;margin:0 0 .4em;color:#FBF7EE}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 70px}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(20,24,41,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:760px;margin:0 auto;padding:12px 20px}
+.topbar .title{font-family:'Fraunces',serif;font-style:italic;color:var(--dim);font-size:.85rem;margin-bottom:8px}
+.navrow{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.navlink{flex:0 0 auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:.74rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--dim);text-decoration:none;white-space:nowrap}
+.navlink:hover{border-color:var(--amber);color:var(--ink)}
+.hero{padding:34px 0 10px}
+.hero .kicker{color:var(--amber);font-family:'Fraunces',serif;font-style:italic;margin-bottom:8px;font-size:1rem}
+.hero h1{font-size:clamp(1.7rem,6vw,2.4rem)}
+.hero p{color:var(--dim);max-width:56ch;font-size:.97rem}
+.progress{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--dim);margin-top:14px}
+.progress b{color:var(--amber)}
+section.topic{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin:18px 0;scroll-margin-top:70px}
+.topic .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--amber);color:#1a1204;font-weight:800;font-size:.85rem;margin-right:8px}
+.topic h2{font-size:1.25rem;display:flex;align-items:center}
+.topic .body{color:var(--dim);font-size:.93rem;margin-top:10px}
+.topic .body p{margin:0 0 10px}
+.formula{display:inline-block;background:var(--bg-2);border:1px solid var(--amber);border-radius:8px;padding:6px 12px;color:var(--teal);font-family:'Fraunces',serif;font-size:1rem;margin:6px 0}
+.keypoints{margin:10px 0 0;padding-left:18px}
+.keypoints li{margin-bottom:6px;font-size:.89rem}
+.note{margin-top:12px;background:var(--bg-2);border-left:3px solid var(--violet);border-radius:0 10px 10px 0;padding:10px 14px}
+.note .tag{font-size:.7rem;font-weight:800;letter-spacing:.03em;color:var(--violet);margin-bottom:3px}
+.note p{margin:0;font-size:.87rem;color:var(--dim)}
+.example{margin-top:10px;background:rgba(89,214,196,.07);border:1px solid rgba(89,214,196,.3);border-radius:10px;padding:10px 14px}
+.example .tag{font-size:.7rem;font-weight:800;letter-spacing:.03em;color:var(--teal);margin-bottom:3px}
+.example p{margin:0;font-size:.87rem;color:var(--dim)}
+.cta{display:inline-block;margin-top:14px;font-family:'Manrope',sans-serif;font-weight:700;font-size:.8rem;padding:9px 16px;border-radius:999px;border:1px solid var(--teal);color:var(--teal);text-decoration:none}
+.cta:hover{background:rgba(89,214,196,.12)}
+footer{text-align:center;color:var(--dim);font-size:.8rem;padding:30px 20px 10px}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-inner">
+  <div class="title">8-sinf Fizika · III chorak — umumiy ko'rinish</div>
+  <div class="navrow" id="navrow"></div>
+</div></div>
+
+<div class="wrap">
+<div class="hero">
+  <div class="kicker">III chorak</div>
+  <h1>Elektr tokining ishi, quvvati va turli muhitlarda o'tishi</h1>
+  <p>14 mavzudan iborat III chorakning kengaytirilgan ko'rinishi — har bir mavzu bo'yicha batafsil tushuntirish, formulalar, amaliy misollar va chuqur o'rganish uchun to'liq interaktiv platformaga havola.</p>
+  <div class="progress">Holat: <b>14 / 14</b> mavzu tayyor — chorak to'liq yakunlandi! 🎉</div>
+</div>
+
+<section class="topic" id="t1">
+  <h2><span class="num">1</span>Elektr tokining ishi</h2>
+  <div class="body">
+    <p>Elektr toki o'tkazgich orqali oqayotganda, u ma'lum bir ish bajaradi — masalan, lampochkani yoritadi, motorni aylantiradi yoki suvni isitadi. Bu jarayonda zaryadlar elektr maydon kuchlari ta'sirida harakatlanadi va shu kuchlar ma'lum miqdorda ish bajaradi.</p>
+    <div class="formula">A = U · I · t</div>
+    <ul class="keypoints">
+      <li>A — bajarilgan ish (joulda, J)</li>
+      <li>U — zanjir qismidagi kuchlanish (voltda, V)</li>
+      <li>I — tok kuchi (amperda, A)</li>
+      <li>t — tok o'tgan vaqt (sekundda, s)</li>
+      <li>Amaliyotda ko'pincha kattaroq birlik — kilovatt-soat (kVt·soat) ishlatiladi: 1 kVt·soat = 3 600 000 J</li>
+    </ul>
+    <div class="example"><div class="tag">Amaliy misol</div><p>220V kuchlanishda 0,5A tok bilan 1 soat yongan lampochka A = 220×0,5×3600 = 396 000 J = 0,11 kVt·soat ish bajaradi.</p></div>
+    <div class="note"><div class="tag">Nega muhim?</div><p>Uyingizdagi elektr hisobi (schyotchik) aynan shu — elektr tokining bajargan ishini, ya'ni iste'mol qilingan energiyani o'lchaydi. Oy oxirida to'lanadigan summa ham shu qiymatga asoslanadi.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/PjeCe7YMxADNkDHu1mxzA5" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t2">
+  <h2><span class="num">2</span>Elektr tokining quvvati</h2>
+  <div class="body">
+    <p>Quvvat — birlik vaqtda bajarilgan ishni ko'rsatuvchi kattalik. Elektr tokida bu kattalikni to'g'ridan-to'g'ri kuchlanish va tok kuchi orqali topish mumkin, vaqtni bilish shart emas.</p>
+    <div class="formula">P = U · I</div>
+    <ul class="keypoints">
+      <li>P — quvvat, birligi vatt (Vt), ingliz muhandisi Jeyms Vatt sharafiga nomlangan</li>
+      <li>Katta quvvatlar uchun kilovatt (kVt) = 1000 Vt ishlatiladi</li>
+      <li>P = A/t munosabati orqali ish va quvvat bir-biriga bog'langan: A = P·t</li>
+      <li>Har bir elektr asbobida uning nominal quvvati ko'rsatilgan bo'ladi (masalan, choynakda "2000 Vt")</li>
+    </ul>
+    <div class="example"><div class="tag">Taxminiy quvvatlar</div><p>LED lampochka ~10 Vt, oddiy lampochka ~60 Vt, noutbuk ~65 Vt, televizor ~100 Vt, choynak ~2000 Vt, konditsioner ~1500–2500 Vt.</p></div>
+    <div class="note"><div class="tag">Nega muhim?</div><p>Uyda bir vaqtning o'zida juda ko'p yuqori quvvatli asbob ishlatish (masalan, choynak + dazmol + konditsioner) elektr tarmog'iga ortiqcha yuklanish berib, avtomatni "uradi" yoki simlarni qizdirib yuborishi mumkin.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/4hVocnYyetxHiYBbXqRcuu" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t3">
+  <h2><span class="num">3</span>Laboratoriya ishi-4: Lampochka quvvatini aniqlash</h2>
+  <div class="body">
+    <p>Bu amaliy ishda o'quvchilar voltmetr va ampermetr yordamida real o'lchov o'tkazib, lampochkaning haqiqiy quvvatini hisoblaydilar va natijani qadoqda yozilgan nominal qiymat bilan solishtiradilar.</p>
+    <ul class="keypoints">
+      <li><b>1-qadam:</b> Lampochkani batareyaga ulang, ampermetrni zanjirga ketma-ket, voltmetrni esa lampochkaga parallel ulang</li>
+      <li><b>2-qadam:</b> Kalitni yoping va ikkala asbob ko'rsatkichini (U va I) yozib oling</li>
+      <li><b>3-qadam:</b> P = U·I formulasi bo'yicha quvvatni hisoblang</li>
+      <li><b>4-qadam:</b> Natijani lampochka qadog'ida yozilgan qiymat bilan solishtiring</li>
+      <li><b>5-qadam:</b> Agar farq katta bo'lsa, buning sababini (o'lchov xatosi, eskirgan lampochka) muhokama qiling</li>
+    </ul>
+    <div class="note"><div class="tag">Jihozlar</div><p>Lampochka, batareya, ampermetr, voltmetr, ulovchi simlar, kalit.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/VYvkah79xPKPscvh4mVtP9" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t4">
+  <h2><span class="num">4</span>Elektr toki ta'sirida o'tkazgichning qizishi</h2>
+  <div class="body">
+    <p>O'tkazgichda harakatlanayotgan erkin elektronlar kristall panjara ionlari bilan muttasil to'qnashadi. Har bir to'qnashuvda elektronning bir qismi kinetik energiyasi panjaraga uzatiladi va issiqlik energiyasiga aylanadi — natijada o'tkazgich qiziydi.</p>
+    <ul class="keypoints">
+      <li>Tok kuchi qancha katta bo'lsa, birlik vaqtda shuncha ko'p to'qnashuv va shuncha ko'p issiqlik ajraladi</li>
+      <li>Qarshiligi yuqori materiallar (masalan, nixrom) ko'proq qiziydi</li>
+      <li>Qizish darajasi materialning qarshiligiga, tok kuchiga va vaqtga bog'liq</li>
+    </ul>
+    <div class="example"><div class="tag">Foydali qo'llanilish</div><p>Elektr dazmol, choynak, isitgich, non pishirgich — bularning barchasida yuqori qarshilikli nixrom sim ataylab qo'llaniladi.</p></div>
+    <div class="note"><div class="tag">Zararli holat</div><p>Simlar haddan tashqari qizib ketsa, bu izolyatsiyani eritib, yong'inga sabab bo'lishi mumkin — shuning uchun simlar to'g'ri qalinlikda tanlanishi kerak.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/U2L69U6WT8Rgtoqj9x4Hq5" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t5">
+  <h2><span class="num">5</span>Joul-Lens qonunining amaliy tadbiqlari</h2>
+  <div class="body">
+    <p>1840-yillarda ingliz fizigi Jeyms Joul va rus fizigi Emiliy Lens, bir-biridan mustaqil ravishda, tok o'tishi natijasida o'tkazgichda ajraladigan issiqlik miqdorini aniq hisoblash formulasini kashf etishgan.</p>
+    <div class="formula">Q = I² · R · t</div>
+    <ul class="keypoints">
+      <li>Q — ajralgan issiqlik miqdori (J), I — tok kuchi (A), R — qarshilik (Ω), t — vaqt (s)</li>
+      <li><b>Diqqat:</b> tok kuchi formulada <b>kvadratda</b> qatnashadi — tok 2 marta oshsa, issiqlik 4 marta ortadi</li>
+      <li>Qonun ham foydali (isitish asboblari), ham himoya (predohranitellar) maqsadida qo'llaniladi</li>
+    </ul>
+    <div class="example"><div class="tag">Himoya vazifasi</div><p>Elektr predohranitel (plavkiy saqlagich) shu qonunga asoslanadi: tok haddan tashqari ko'paysa, ingichka sim tez qizib, eriydi va zanjirni uzadi — bu yong'indan himoya qiladi.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/W5a6y1A3GVaRiixXmtbbJF" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t6">
+  <h2><span class="num">6</span>Xonadon elektr zanjirida ulanishlar</h2>
+  <div class="body">
+    <p>Uyimizga kelayotgan elektr energiyasi bir necha bosqichdan o'tadi: avval elektr hisobi (schyotchik), so'ng avtomat himoyalagich, va nihoyat har bir xonaga parallel taqsimlangan rozetka va chiroqlar tarmog'i.</p>
+    <ul class="keypoints">
+      <li>Elektr hisobi iste'mol qilingan energiyani kVt·soatda o'lchaydi</li>
+      <li>Avtomat himoyalagich haddan tashqari tok (qisqa tutashuv) yuz berganda zanjirni avtomatik uzadi</li>
+      <li>Xonalardagi rozetka va chiroqlar parallel ulanadi — shuning uchun bitta asbob ishdan chiqsa, qolganlari ishlayveradi</li>
+      <li>Yerga ulash (zazemlenie) simi qochoq tokdan odamni himoya qiladi</li>
+    </ul>
+    <div class="note"><div class="tag">Nega parallel?</div><p>Agar xonalar ketma-ket ulangan bo'lsa, bitta xonadagi chiroq o'chganda butun uy qorong'i qolardi. Parallel ulanish har bir xonaning mustaqil ishlashini ta'minlaydi.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/XE43aqimCMiaino14NC8RK" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t7">
+  <h2><span class="num">7</span>Elektr xavfsizlik choralari. "Elektr asboblari"</h2>
+  <div class="body">
+    <p>Inson tanasi ham elektr tokini o'tkazadi, shuning uchun katta kuchlanish yoki tok kuchi yurak faoliyatini buzishi, kuydirishi yoki hatto o'limga olib kelishi mumkin. Shu sababli elektr bilan ishlashda bir qator qoidalarga qat'iy rioya qilish shart.</p>
+    <ul class="keypoints">
+      <li>Ho'l qo'l bilan elektr asboblarga yoki rozetkaga tegmang — suv tokni yaxshi o'tkazadi</li>
+      <li>Eskirgan, yorilgan yoki ta'mirlangan simlardan foydalanmang</li>
+      <li>Rozetkaga bir vaqtda juda ko'p asbob ulamang — bu ortiqcha yuklanishga olib keladi</li>
+      <li>Bolalarni rozetka va elektr simlaridan nari tuting</li>
+    </ul>
+    <div class="note"><div class="tag">Birinchi yordam</div><p>Agar kimdir tok urgan bo'lsa: avval tok manbaini o'chiring yoki quruq yog'och/plastmassa buyum bilan simdan ajrating, so'ng darhol shoshilinch tibbiy yordam chaqiring. Hech qachon tok ta'sirida qolgan odamni qo'l bilan ushlab tortmang!</p></div>
+    <a class="cta" href="https://claude.ai/artifact/HGYTkWyYS4S382ByY3ahF2" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t8">
+  <h2><span class="num">8</span>Metallarda elektr toki</h2>
+  <div class="body">
+    <p>Metall atomlari o'z tashqi qavatidagi elektronlarini oson beradi. Natijada metall musbat ionlardan tashkil topgan kristall panjara va bu panjara ichida erkin harakatlanuvchi elektronlar "bulutini" hosil qiladi.</p>
+    <ul class="keypoints">
+      <li>Kuchlanish qo'yilmaganda erkin elektronlar tartibsiz, har tomonga harakatlanadi</li>
+      <li>Kuchlanish qo'yilganda elektr maydon ta'sirida elektronlar tartibli (drift) harakatga o'tadi — bu elektr tokidir</li>
+      <li>Erkin elektron soni qancha ko'p bo'lsa, metall shuncha yaxshi o'tkazgich hisoblanadi</li>
+    </ul>
+    <div class="example"><div class="tag">Eng yaxshi o'tkazgichlar</div><p>Kumush eng yaxshi o'tkazgich, undan keyin mis, keyin oltin, keyin alyuminiy keladi. Shu sababli elektr simlar odatda mis yoki alyuminiydan tayyorlanadi (kumush juda qimmat).</p></div>
+    <a class="cta" href="https://claude.ai/artifact/DMt8msdhrvR4tRX31AjnhE" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t9">
+  <h2><span class="num">9</span>Suyuqliklarda elektr toki</h2>
+  <div class="body">
+    <p>Toza (distillangan) suvda erkin zaryadlangan zarrachalar deyarli yo'q, shuning uchun u elektr tokini juda yomon o'tkazadi. Ammo agar suvga tuz, kislota yoki ishqor qo'shilsa, bu moddalar musbat va manfiy ionlarga ajraladi (dissotsiatsiya) va eritma elektrolitga aylanadi.</p>
+    <ul class="keypoints">
+      <li>Elektrolitga elektr maydon ta'sir qilganda, musbat ionlar manfiy elektrodga, manfiy ionlar esa musbat elektrodga qarab harakatlanadi</li>
+      <li>Ionlarning bu qarama-qarshi harakati tok hosil qiladi</li>
+      <li>Tuzli yoki iflos suv yaxshi o'tkazgich bo'lgani uchun juda xavfli bo'lishi mumkin</li>
+    </ul>
+    <div class="note"><div class="tag">Nega muhim?</div><p>Shu sababli vannada yotib yoki ho'l qo'l bilan elektr asbob ishlatish taqiqlanadi — hatto nisbatan "toza" suv ham to'liq xavfsizlik kafolatini bermaydi, chunki undagi erigan moddalar uni o'tkazuvchan qiladi.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/9D9Fvz8h1J3TdBTE6bA3uq" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t10">
+  <h2><span class="num">10</span>Elektroliz. Faradeyning birinchi qonuni</h2>
+  <div class="body">
+    <p>Elektrolit eritmadan tok o'tganda, eritmadagi moddalar kimyoviy ravishda parchalanadi — bu jarayon elektroliz deb ataladi. Metall ionlari manfiy elektrod — katodga tortilib, u yerda toza metall sifatida cho'kadi.</p>
+    <div class="formula">m = k · I · t</div>
+    <ul class="keypoints">
+      <li>m — ajralgan modda massasi, k — elektrokimyoviy ekvivalent, I — tok kuchi, t — vaqt</li>
+      <li>Ajralgan massa tok kuchi va vaqtga to'g'ri proporsional</li>
+      <li>Jarayon anod (musbat) va katod (manfiy) elektrodlar yordamida amalga oshiriladi</li>
+    </ul>
+    <div class="example"><div class="tag">Qo'llanilishi</div><p>Zargarlik buyumlariga oltin yoki kumush qoplash (galvanika), metallarni zanglashdan himoyalash (xromlash) va xomashyo metallarni yuqori tozalikda ishlab chiqarish (elektrolitik rafinatsiya).</p></div>
+    <a class="cta" href="https://claude.ai/artifact/4BPUR3DUcr3TnuWPYjNzLd" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t11">
+  <h2><span class="num">11</span>Faradeyning ikkinchi qonuni</h2>
+  <div class="body">
+    <p>Birinchi qonun bitta moddaning tok kuchi va vaqtga bog'liqligini ko'rsatsa, ikkinchi qonun turli moddalarni bir-biri bilan solishtirish imkonini beradi: bir xil zaryad miqdorida ajralgan turli moddalar massalari ularning elektrokimyoviy ekvivalentlariga proporsionaldir.</p>
+    <ul class="keypoints">
+      <li>Har bir element uchun o'ziga xos k qiymati bor — bu uning atom massasi va valentligiga bog'liq</li>
+      <li>Og'irroq va kam valentli elementlar (masalan, kumush) bir xil zaryadda ko'proq massa beradi</li>
+      <li>Misol: kumushning k=1,12, alyuminiyniki esa k=0,09 — farq sezilarli</li>
+    </ul>
+    <div class="note"><div class="tag">Amaliy ahamiyati</div><p>Zargarlik sanoatida oltin yoki kumush qoplashda, kerakli qalinlikdagi qatlamni olish uchun qancha vaqt va tok kerakligini aniq hisoblashda bu qonun ishlatiladi.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/3gnkqL2pgE1c9zVa2gx4Du" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t12">
+  <h2><span class="num">12</span>Elektrolizdan turmushda va texnikada foydalanish</h2>
+  <div class="body">
+    <p>Elektroliz hodisasi zargarlik, avtomobilsozlik, metallurgiya va qurilish sohalarida keng qo'llaniladi — u bizning kundalik hayotimizning ko'plab jihatlarida yashiringan.</p>
+    <ul class="keypoints">
+      <li><b>Galvanika:</b> buyum yuzasiga yupqa oltin, kumush yoki xrom qatlami qoplanadi — bu qimmat metalldan tejaydi va chiroyli ko'rinish beradi</li>
+      <li><b>Korroziyadan himoya:</b> vintlar, mixlar, trubalar tsink bilan qoplanadi (galvanizatsiya) — bu ularni zanglashdan uzoq vaqt himoya qiladi</li>
+      <li><b>Metallurgiya:</b> elektrolitik rafinatsiya orqali mis, alyuminiy va boshqa metallar yuqori tozalikda (99,9%) ishlab chiqariladi</li>
+      <li><b>Boshqa qo'llanilishlar:</b> suvni vodorod va kislorodga ajratish, zanglagan buyumlarni tozalash</li>
+    </ul>
+    <a class="cta" href="https://claude.ai/artifact/SuZ2KofwZAejfRjsJjuu1G" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t13">
+  <h2><span class="num">13</span>Vakuumda elektr toki</h2>
+  <div class="body">
+    <p>Vakuum — havo va boshqa gazlar deyarli yo'q bo'shliq. Oddiy sharoitda bo'shliqda erkin zaryad tashuvchilar bo'lmaydi, shuning uchun tok o'tmaydi. Lekin agar metall (katod) juda yuqori haroratgacha qizdirilsa, undagi ba'zi elektronlar yetarli energiya olib, metall yuzasidan "uchib chiqadi" — bu hodisa termoelektron emissiya deyiladi.</p>
+    <ul class="keypoints">
+      <li>Vakuum diodida qizigan katod va sovuq anod joylashtiriladi</li>
+      <li>Elektronlar faqat katoddan anodga qarab harakatlanadi — tok faqat bir yo'nalishda oqadi</li>
+      <li>Bu xususiyat tokni to'g'rilash (o'zgaruvchan tokni o'zgarmas tokka aylantirish) uchun ishlatilgan</li>
+    </ul>
+    <div class="example"><div class="tag">Tarixiy ahamiyati</div><p>Vakuum lampalar (elektron lampalar) radio, eski televizor (kinoskop) va rentgen apparatlarida ishlatilgan. Hozirda ularning o'rnini kichikroq va tejamkor yarimo'tkazgich qurilmalar (tranzistorlar) egallagan.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/6QnLNp671PSBFqkb5XZzHE" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+<section class="topic" id="t14">
+  <h2><span class="num">14</span>Gazlarda elektr toki</h2>
+  <div class="body">
+    <p>Odatiy sharoitda gaz molekulalari neytral bo'lgani uchun gazlar elektr tokini deyarli o'tkazmaydi — ular izolyator vazifasini bajaradi. Ammo agar gazga yuqori kuchlanish, yuqori harorat yoki radiatsiya ta'sir qilsa, gaz molekulalari ionlarga ajraladi (ionlashadi) va bu ionlar tok hosil qiladi — bu jarayon gaz razryadi deyiladi.</p>
+    <ul class="keypoints">
+      <li><b>Uchqunli razryad:</b> chaqmoq — bulutlar yoki bulut va yer orasida to'plangan katta zaryadning bir zumda razryad bo'lishi</li>
+      <li><b>Shamli razryad:</b> neon lampalar — shisha naycha ichidagi gaz orqali tok o'tkazilganda yorqin rang bilan yorishadi</li>
+      <li><b>Yoy razryadi:</b> payvandlash jarayonida ikki elektrod orasida yuqori haroratli yoy hosil qilinadi</li>
+    </ul>
+    <div class="example"><div class="tag">Amaliy qo'llanilishlar</div><p>Neon reklama lavhalari, lyuminessent lampalar, payvandlash uskunalari, plazma texnologiyalari — bularning barchasi gazlardagi elektr tokiga asoslangan.</p></div>
+    <a class="cta" href="https://claude.ai/artifact/1FiAEcyP6UZuV6H4d8yBuW" target="_blank">To'liq platformani ochish →</a>
+  </div>
+</section>
+
+</div>
+<footer>8-sinf Fizika · III chorak — umumiy ko'rinish (14/14 mavzu, to'liq)</footer>
+
+<script>
+const topics=[1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+const navrow=document.getElementById('navrow');
+topics.forEach(n=>{ const a=document.createElement('a'); a.className='navlink'; a.href='#t'+n; a.textContent=n; navrow.appendChild(a); });
+</script>
+</body>
+</html>
